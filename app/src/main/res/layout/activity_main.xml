@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sunny_bg"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_12sdp">
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/change_location_card"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:cardCornerRadius="@dimen/_10sdp"
+           app:cardUseCompatPadding="true"
+           app:cardBackgroundColor="@android:color/transparent">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:text="Change Location"
+               android:padding="@dimen/_15sdp"
+               android:textColor="@color/white"
+               android:textSize="@dimen/_16ssp"
+               />
+       </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/city_name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/change_location_card"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="Guwahati"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_28ssp" />
+
+        <TextView
+            android:id="@+id/temp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/city_name_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:text="25°C"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_32sdp" />
+
+        <TextView
+            android:id="@+id/weather_condition_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temp_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Sunny"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_28ssp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/weather_condition_txt"
+            android:layout_marginTop="@dimen/_25sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wind"/>
+                <TextView
+                    android:id="@+id/wind_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:text="9Kmph"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_1sdp"
+                    android:text="Wind"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/humidity"/>
+                <TextView
+                    android:id="@+id/humidity_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:text="50%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_1sdp"
+                    android:text="Humidity"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:visibility="gone"
+            android:id="@+id/lottie_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/weather_loader"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.WeatherNow" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.WeatherNow" parent="Base.Theme.WeatherNow" />
+</resources>
